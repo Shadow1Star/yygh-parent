@@ -1,4 +1,4 @@
-package com.echeng.yygh.hosp.config;
+package com.echeng.yygh.cmn.config;
 
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -12,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
  * @date 2022/1/28 4:45 下午
  */
 @Configuration
-@MapperScan("com.echeng.yygh.hosp.mapper")
-public class HospConfig {
+@MapperScan("com.echeng.yygh.cmn.mapper")
+public class CmnConfig {
     @Bean
     public PaginationInnerInterceptor paginationInnerInterceptor() {
         return new PaginationInnerInterceptor();

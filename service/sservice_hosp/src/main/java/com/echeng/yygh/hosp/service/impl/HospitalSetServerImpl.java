@@ -2,7 +2,7 @@ package com.echeng.yygh.hosp.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.echeng.yygh.hosp.mapper.HospitalSetMapper;
-import com.echeng.yygh.hosp.service.HospitalSerServer;
+import com.echeng.yygh.hosp.service.HospitalSetServer;
 import com.echeng.yygh.model.hosp.HospitalSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * @date 2022/1/28 4:37 下午
  */
 @Service
-public class HospitalSetServerImpl extends ServiceImpl<HospitalSetMapper, HospitalSet> implements HospitalSerServer {
+public class HospitalSetServerImpl extends ServiceImpl<HospitalSetMapper, HospitalSet> implements HospitalSetServer {
 
 
 

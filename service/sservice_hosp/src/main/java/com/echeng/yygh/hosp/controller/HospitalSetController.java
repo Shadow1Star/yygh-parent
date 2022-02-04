@@ -1,12 +1,10 @@
 package com.echeng.yygh.hosp.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.echeng.yygh.common.utils.MD5;
-import com.echeng.yygh.hosp.service.HospitalSerServer;
+import com.echeng.yygh.hosp.service.HospitalSetServer;
 import com.echeng.yygh.model.hosp.HospitalSet;
-import com.echeng.yygh.vo.hosp.HospitalQueryVo;
 import com.echeng.yygh.vo.hosp.HospitalSetQueryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -27,11 +25,12 @@ import java.util.Random;
  */
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
-@Api(value = "医院接口", tags = "医院设置接口")
+@Api(value = "医院设置接口", tags = "医院设置接口")
+@CrossOrigin
 public class HospitalSetController {
     //    注入service
     @Autowired
-    private HospitalSerServer hospitalSetServer;
+    private HospitalSetServer hospitalSetServer;
 
     //    查询医院设置表所有信息
     @ApiOperation(value = "查询所有医院信息")
@@ -72,8 +71,8 @@ public class HospitalSetController {
         if (!StringUtils.isEmpty(hosname)) {
             wrapper.like("hosname", hospitalSetQueryVo.getHosname());
         }
-        Page<HospitalSet> pageHospSet = hospitalSetServer.page(page, wrapper);
-        return Result.ok(pageHospSet);
+        Page<HospitalSet> pageHospitalSet = hospitalSetServer.page(page, wrapper);
+        return Result.ok(pageHospitalSet);
     }
 
 

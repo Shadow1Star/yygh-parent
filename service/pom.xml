@@ -14,6 +14,7 @@
     <modules>
         <module>service_user</module>
         <module>sservice_hosp</module>
+        <module>service_cmn</module>
     </modules>
 
     <properties>
@@ -27,6 +28,13 @@
             <groupId>com.echeng.yygh</groupId>
             <artifactId>model</artifactId>
             <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.echeng.yygh</groupId>
+            <artifactId>common_util</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
         </dependency>
 
         <!--web-->
